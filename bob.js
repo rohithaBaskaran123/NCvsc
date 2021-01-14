@@ -5,14 +5,14 @@ class Bob {
     restituiton:0.8
     }
     this.radius=r;
-    this.bob=Bodies.circle(x,y,r,options);
-    World.add(world,this.bob);
+    this.body=Bodies.circle(x,y,r,options);
+    World.add(world,this.body);
     }
     display(){
-        var pos=this.bob.position;
+        var pos=this.body.position;
         push();
         translate(pos.x, pos.y);
-        
+        fill("cyan");
         ellipseMode(RADIUS);
         ellipse(0,0,this.radius,this.radius)
         pop();
